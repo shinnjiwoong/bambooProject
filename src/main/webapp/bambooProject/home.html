@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css" />
+<title>BAMBOO</title>
+</head>
+<body>
+	<div class="title-container"><h2>Welcome to BAMBOO!</h2></div>
+	<div class="description-container">
+		<h3>당신이 오늘 털어놓고 싶은 이야기는 무엇인가요?</h3>
+		<form method="post" action="/bamboo/questions">
+			<select class="scope-of-problem" name="scope">
+			<option>재정문제 (Finance)</option>
+			<option>관계 (Relationship)</option>
+			<option>건강 (Health)</option>
+			<option>기타 (ETC.)</option>
+			</select>
+			<input class="submit-btn"type="submit" value="입장하기">
+		</form>
+
+	</div>
+
+</body>
+</html>

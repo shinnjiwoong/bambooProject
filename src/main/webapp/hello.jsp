@@ -7,7 +7,7 @@
 <title>Hello World</title>
 </head>
 <body> 
-	<h2>Hello World</h2>
+	<h2>BAMBOO에 오신것을 환영합니다!</h2>
 	<hr>
 	현재 날짜와 시간은
 	<%=java.time.LocalDateTime.now()%>
