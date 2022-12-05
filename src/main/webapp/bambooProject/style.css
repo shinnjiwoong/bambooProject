@@ -9,7 +9,7 @@
 }
 body{
 	font-weight: lighter;
-    background-color: #AEC957;
+    background-color: rgb(250, 250, 250);
 }
 .title-container{
 	top:0;
@@ -17,15 +17,13 @@ body{
 	
 }
 .title-container h2{
-	color: #377C07;
-	margin:5rem;
+	color: rgb(25, 25, 25);
 	font-size:5rem;
 	font-weight: lighter;
 }
 .description-container h3{
 	font-size: 3rem;
 	color: #377C07;
-	margin:5rem;
 	font-weight:lighter;
 }
 .scope-of-problem{

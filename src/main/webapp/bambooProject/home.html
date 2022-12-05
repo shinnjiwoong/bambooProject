@@ -1,25 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="style.css" />
-<title>BAMBOO</title>
-</head>
-<body>
-	<div class="title-container"><h2>Welcome to BAMBOO!</h2></div>
-	<div class="description-container">
-		<h3>당신이 오늘 털어놓고 싶은 이야기는 무엇인가요?</h3>
-		<form method="post" action="/bamboo/questions">
-			<select class="scope-of-problem" name="scope">
-			<option>재정문제 (Finance)</option>
-			<option>관계 (Relationship)</option>
-			<option>건강 (Health)</option>
-			<option>기타 (ETC.)</option>
-			</select>
-			<input class="submit-btn"type="submit" value="입장하기">
-		</form>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Helvetica";
+      }
+      body {
+        font-weight: lighter;
+        background-color: rgb(250, 250, 250);
+      }
 
-	</div>
+      .title-container h2 {
+        color: rgb(25, 25, 25);
+        font-size: 3rem;
+        font-weight: lighter;
+      }
+      .description-container h3 {
+        font-size: 2rem;
+        color: rgb(25, 25, 25);
+        font-weight: lighter;
+      }
+      .beansText {
+        /* margin-left: 5rem; */
+        background-color: rgb(250, 250, 250);
+        line-break: auto;
+        padding: 1rem;
+        width: 100vw;
+        height: 50vh;
+        border: none;
+        font-size: 1.5rem;
+        font-weight: lighter;
+      }
 
-</body>
+      .submit-btn {
+        border: solid 1px rgb(25, 25, 25);
+        background-color: rgb(250, 250, 250);
+        color: rgb(25, 25, 25);
+        transition: all 0.2s cubic-bezier(0.76, -0.01, 0.23, 1);
+        font-weight: lighter;
+      }
+      .submit-btn:hover {
+        background-color: rgb(250, 250, 250);
+        color: rgb(25, 25, 25);
+      }
+    </style>
+    <title>BAMBOO</title>
+  </head>
+  <body>
+    <div class="description-container">
+      <h3>Spill your beans :</h3>
+      <form method="post" action="/bambooProject/resultBean">
+        <textarea class="beansText" autofocus></textarea>
+        <br />
+        <input class="submit-btn" type="submit" value="입장하기" />
+      </form>
+    </div>
+    <script>
+      const textInput = document.querySelector(".beansText");
+      window.onLoad = function () {
+        textInput.focus();
+      };
+    </script>
+  </body>
 </html>
