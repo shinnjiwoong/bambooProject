@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Helvetica";
+      }
+      body {
+        font-weight: lighter;
+        background-color: #00584b;
+      }
+
+      h2 {
+      	
+        color: #d8e267;
+        font-size: 2rem;
+        font-weight: lighter;
+        margin:0.5rem;
+      }
+      h3 {
+        font-size: 1.5rem;
+        color: #d8e267;
+        font-weight: lighter;
+        margin:0.5rem;
+      }
+      .title-container{
+      	justify-content:center;
+      	align-items:center;
+      }
+      .beansText {
+        /* margin-left: 5rem; */
+        background-color: #00584b;
+        line-break: auto;
+        padding: 1rem;
+        width: 80vw;
+        height: 30vh;
+        border: none;
+        font-size: 1rem;
+        font-weight: lighter;
+        color:#f6d8f7;
+      }
+
+      input {
+        border: solid 1px rgb(25, 25, 25);
+        background-color: rgb(250, 250, 250);
+        color: rgb(25, 25, 25);
+        transition: all 0.2s cubic-bezier(0.76, -0.01, 0.23, 1);
+        font-weight: lighter;
+      }
+      .submit-btn:hover {
+        background-color: rgb(250, 250, 250);
+        color: rgb(25, 25, 25);
+      }
+      .main-container{
+      	display:flex;
+      	justify-content:center;
+      	align-items:center;
+      }
+    </style> -->
+    <title>Spill your beans</title>
+  </head>
+  <body>
+    <div class="main-screen-container">
+      <div class="title-container">
+        <div class="title-box">
+          <h2 class="title">Spill your beans</h2>
+        </div>
+        <br />
+        <div class="description-container">
+          <p class="desc">
+            Sill the beans라는 영문 표현은 직역하면 '콩을 흘리다'는 뜻으로,
+            '비밀을 얘기하다, 자백하다'라는 의미를 가지고 있습니다. <br />
+            일명 '초연결사회'라는 세상을 살고있는 우리는 오히려 전보다 우리
+            마음속에 있는 얘기들을 쉽게 하지 못하는 경우가 많습니다. <br />
+            오늘 나의 마음속에 쌓인 콩을 비워내지 못하면, 우리는 점점 콩의
+            무게에 짓눌리고 말거에요. <br />
+            슬픈일이던, 기쁜일이던, 아무일도 아니던 좋습니다. 오늘 털어내고 싶은
+            당신의 콩을 적어주세요. <br />
+            그럼, 시작해볼까요?
+          </p>
+        </div>
+        <br />
+        <div class="sub-title-container">
+          <h3 class="sub-title">
+            아래의 옵션 중 오늘 당신의 기분을 골라주세요
+            <i class="arrow fa-solid fa-arrow-turn-down"></i>
+          </h3>
+        </div>
+      </div>
+      <br />
+      <div class="main-container">
+        <!-- <h3>당신의 이름은?</h3>
+          <input type="text" id="submit-btn" name="name" />
+          <h3>어떤 일이 있었나요?</h3>
+          <textarea class="beansText" name="what" autofocus></textarea>
+          <br />
+          <h3>언제 그런 일이 일어났나요?</h3>
+          <textarea class="beansText" name="when" autofocus></textarea>
+          <h3>왜 그런 일이 일어났나요?</h3>
+          <textarea class="beansText" name="why" autofocus></textarea>
+          <br /> -->
+        <div class="face-container">
+          <form
+            method="post"
+            action="/bamboo_ver_1/resultBean"
+            id="mainForm_sad"
+          >
+            <i class="emotion fa-solid fa-face-frown"></i>
+            <button
+              class="submit-btn"
+              type="submit"
+              form="mainForm_sad"
+              value="sad"
+              name="emotion"
+            ></button>
+          </form>
+          <form
+            method="post"
+            action="/bamboo_ver_1/resultBean"
+            id="mainForm_soso"
+          >
+            <i class="emotion fa-solid fa-face-meh"></i>
+            <button
+              class="submit-btn"
+              type="submit"
+              form="mainForm_soso"
+              value="soso"
+              name="emotion"
+            ></button>
+          </form>
+          <form
+            method="post"
+            action="/bamboo_ver_1/resultBean"
+            id="mainForm_happy"
+          >
+            <i class="emotion fa-solid fa-face-smile"></i>
+            <button
+              class="submit-btn"
+              type="submit"
+              form="mainForm_happy"
+              value="happy"
+              name="emotion"
+            ></button>
+          </form>
+        </div>
+        <!-- <button id="submit-btn" type="submit" form="mainForm">
+            일기 작성 끝!
+          </button> -->
+      </div>
+    </div>
+    <div class="intro-screen-container">
+      <div class="loading-symbol-container">
+        <img src="picit_loading_graphic.png" class="logo-image" alt="" />
+        <div class="slogan-container">
+          <p class="intro-title">What's your bean?</p>
+        </div>
+      </div>
+    </div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="app.js"></script>
+  </body>
+</html>
