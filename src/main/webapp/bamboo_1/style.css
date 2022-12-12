@@ -75,14 +75,21 @@ input {
     transition: all 0.2s cubic-bezier(0.76, -0.01, 0.23, 1);
     font-weight: lighter;
   }
+  .submit-container{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .submit-btn{
-    width: 2rem;
-    height: 2rem;
+    /* width: 2rem;
+    height: 2rem; */
     border: solid 1px #f6d8f7;
     border-radius: 50%;
-background-color: #00584b;
+    background-color: #00584b;
   	transition: all 0.1s cubic-bezier(0.76, -0.01, 0.23, 1);
-  	color : #00584b;
+  	color : #f6d8f7;
+    padding: 0.5rem 1rem;
   }
 .submit-btn:hover {
   background-color:#f6d8f7;
